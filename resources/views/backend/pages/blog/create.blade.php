@@ -9,19 +9,17 @@
       <form action="{{ route('blog.store') }}" method="POST">
         @csrf
         <div class="form-group">
-          <label for="title" class="form-control-label">Blog Title</label>
+          <label for="title" class="form-control-label">Article Title</label>
           <input  type="text"
-                  name="blog"
+                  name="title"
                   value="{{ old('title') }}"
                   class="form-control @error('title') is-invalid @enderror"/>
           @error('title') <div class="text-muted">{{ $message }}</div> @enderror
         </div>
         <div class="form-group">
-            <label for="description" class="form-control-label">Blog Description</label>
-            <input  type="text"
-                    name="description"
-                    value="{{ old('description') }}"
-                    class="form-control @error('description') is-invalid @enderror"/>
+            <label for="description" class="form-control-label">Article Description</label>
+            <textarea name="description"
+                    class="ckeditor form-control @error('description') is-invalid @enderror">{{ old('description')}}</textarea>
             @error('description') <div class="text-muted">{{ $message }}</div> @enderror
           </div>
     </div>
@@ -30,7 +28,7 @@
             <button class="btn btn-primary btn-sm" type="submit">
                 Submit New Article
             </button>
-            <a href="{{ route('backend.blog.index')}}" class="btn btn-warning btn-sm">
+            <a href="{{ route('blog.index')}}" class="btn btn-warning btn-sm">
                 Cancel
             </a>
         </div>

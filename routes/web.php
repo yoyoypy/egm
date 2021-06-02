@@ -28,7 +28,7 @@ Route::prefix('admin')->middleware('auth')->group( function() {
 // });
 
 // Route::get('category', 'CategoryController@index');
-// Route::get('category/{id}', 'CategoryController@show');
+// Route::get('category/{slug}', 'CategoryController@show');
 
 // Route::get('blog/{slug}', 'BlogController@show');
 

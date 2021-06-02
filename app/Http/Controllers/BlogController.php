@@ -41,10 +41,14 @@ class BlogController extends Controller
      */
     public function store(BlogRequest $request)
     {
-        $data = $request->all();
+        //$data = $request->all();
 
-        Company::create($data);
-        return redirect()->route('backend.blog.index');
+        Blog::create([
+            'slug' => Str::slug($request->title),
+            'title' => $request->input('title'),
+            'description' => $request->input('description')
+        ]);
+        return redirect()->route('blog.index');
     }
 
     /**
@@ -66,7 +70,11 @@ class BlogController extends Controller
      */
     public function edit($id)
     {
-        //
+        $item = Blog::findOrFail($id);
+
+        return view('backend.pages.blog.edit')->with([
+            'item' => $item
+        ]);
     }
 
     /**
@@ -76,9 +84,14 @@ class BlogController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(BlogRequest $request, $id)
     {
-        //
+        $data = $request->all();
+
+        $item = Blog::findOrFail($id);
+        $item->update($data);
+
+        return redirect()->route('blog.index');
     }
 
     /**
@@ -89,6 +102,9 @@ class BlogController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $item = Blog::findOrFail($id);
+        $item->delete();
+
+        return redirect()->route('blog.index');
     }
 }

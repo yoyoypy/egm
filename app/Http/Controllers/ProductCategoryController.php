@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Category;
+use App\Http\Requests\CategoryRequest;
+use Illuminate\Support\Str;
 
 class ProductCategoryController extends Controller
 {
@@ -13,7 +16,11 @@ class ProductCategoryController extends Controller
      */
     public function index()
     {
-        //
+        $items = Category::all();
+
+        return view('backend.pages.category.index')->with([
+            'items' => $items
+        ]);
     }
 
     /**
@@ -23,7 +30,7 @@ class ProductCategoryController extends Controller
      */
     public function create()
     {
-        //
+        return view('backend.pages.category.create');
     }
 
     /**
@@ -32,9 +39,14 @@ class ProductCategoryController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(CategoryRequest $request)
     {
-        //
+        $data = $request->all();
+        Category::create([
+            'slug' => Str::slug($request->category),
+            'category' => $request->input('category'),
+        ]);
+        return redirect()->route('productcategory.index');
     }
 
     /**
@@ -56,7 +68,11 @@ class ProductCategoryController extends Controller
      */
     public function edit($id)
     {
-        //
+        $item = Category::findOrFail($id);
+
+        return view('backend.pages.category.edit')->with([
+            'item' => $item
+        ]);
     }
 
     /**
@@ -66,9 +82,14 @@ class ProductCategoryController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Category $request, $id)
     {
-        //
+        $data = $request->all();
+
+        $item = Category::findOrFail($id);
+        $item->update($data);
+
+        return redirect()->route('productcategory.index');
     }
 
     /**
@@ -79,6 +100,9 @@ class ProductCategoryController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $item = Category::findOrFail($id);
+        $item->delete();
+
+        return redirect()->route('productcategory.index');
     }
 }
