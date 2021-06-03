@@ -3,6 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
+use App\Product;
+use App\Gallery;
+use App\Http\Requests\GalleryRequest;
 
 class ProductGalleryController extends Controller
 {
@@ -13,7 +17,11 @@ class ProductGalleryController extends Controller
      */
     public function index()
     {
-        //
+        $items = Gallery::with('product')->get();
+
+        return view('backend.pages.gallery.index')->with([
+            'items' => $items
+        ]);
     }
 
     /**
@@ -23,7 +31,11 @@ class ProductGalleryController extends Controller
      */
     public function create()
     {
-        //
+        $products = Product::all();
+
+        return view('backend.pages.gallery.create')->with([
+            'products' => $products
+        ]);
     }
 
     /**
@@ -34,7 +46,14 @@ class ProductGalleryController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = $request->all();
+        $data['photo'] = $request->file('photo')->store(
+            'assets/product', 'public'
+        );
+
+        Gallery::create($data);
+
+        return redirect()->route('productgallery.index');
     }
 
     /**
@@ -79,6 +98,9 @@ class ProductGalleryController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $item = Gallery::findOrFail($id);
+        $item->delete();
+
+        return redirect()->route('productgallery.index');
     }
 }

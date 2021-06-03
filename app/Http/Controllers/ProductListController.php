@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 use App\Product;
 use App\Category;
+use App\Gallery;
 use App\Http\Requests\ProductRequest;
 
 class ProductListController extends Controller
@@ -112,5 +113,18 @@ class ProductListController extends Controller
         $item->delete();
 
         return redirect()->route('productlist.index');
+    }
+
+    public function gallery(Request $request, $id)
+    {
+        $product = Product::findorFail($id);
+        $items = Gallery::with('product')
+            ->where('products_id', $id)
+            ->get();
+
+        return view('backend.pages.product.gallery')->with([
+            'product' => $product,
+            'items' => $items
+        ]);
     }
 }

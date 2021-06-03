@@ -33,4 +33,14 @@ class Product extends Model
     {
         return $this->belongsTo(Category::class, 'category_id', 'id');
     }
+
+    /**
+     * Get all of the Galleries for the Product
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function Galleries(): HasMany
+    {
+        return $this->hasMany(Gallery::class, 'product_id');
+    }
 }
