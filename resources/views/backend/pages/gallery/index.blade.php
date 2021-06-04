@@ -9,10 +9,9 @@
                 <a href="{{ route('productgallery.create') }}" class="btn btn-info btn-sm" style="float: right">
                     <i class="fa fa-pencil">Add New Product</i>
                   </a>
-            <h4 class="box-title">Product Photo Lists</h4>
-          </div>
-        </div>
-          <div class="card-body--">
+                <h4 class="box-title">Product Photo Lists</h4>
+            </div>
+        <div class="card-body--">
             <div class="table-stats order-table ov-h">
               <table class="table">
                 <thead>
@@ -57,5 +56,5 @@
         </div>
       </div>
     </div>
-  </div>
+</div>
 @endsection

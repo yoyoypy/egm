@@ -20,11 +20,11 @@ Route::prefix('admin')->middleware('auth')->group( function() {
     ->name('productlist.gallery');
 });
 
-// Route::get('/', 'HomeController@index');
-// Route::get('contact-us', 'ContactController@index');
-// Route::get('about-us', 'AboutController@index');
+Route::get('/', 'HomeController@index');
+Route::get('contact-us', 'ContactController@index');
+Route::get('about-us', 'AboutController@index');
 
-// //product page
+//product page
 // Route::prefix('product' , 'ProductController@index')->group( function(){
 //     Route::get('product/{slug}', 'ProductController@view');
 // });
@@ -32,7 +32,8 @@ Route::prefix('admin')->middleware('auth')->group( function() {
 // Route::get('category', 'CategoryController@index');
 // Route::get('category/{slug}', 'CategoryController@show');
 
-// Route::get('blog/{slug}', 'BlogController@show');
+Route::get('blog', 'BlogController@index');
+Route::get('blog/{slug}', 'BlogController@show');
 
 
 
