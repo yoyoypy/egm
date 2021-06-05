@@ -37,32 +37,55 @@
                 </div>
             </div>
             <div class="col-lg-6">
-                <form class="widget-contact-form" novalidate action="include/contact-form.php" role="form" method="post">
-                    <div class="row">
-                        <div class="form-group col-md-6">
-                            <label for="name">Name</label>
-                            <input type="text" aria-required="true" required name="widget-contact-form-name" class="form-control required name" placeholder="Enter your Name">
-                        </div>
-                        <div class="form-group col-md-6">
-                            <label for="email">Email</label>
-                            <input type="email" aria-required="true" required name="widget-contact-form-email" class="form-control required email" placeholder="Enter your Email">
-                        </div>
-                    </div>
+                <form action="contact-us" method="post">
+                    @csrf
                     <div class="row">
                         <div class="form-group col-md-12">
-                            <label for="subject">Your Subject</label>
-                            <input type="text" name="widget-contact-form-subject" required class="form-control required" placeholder="Subject...">
+                            <label for="name" class="form-control-label">Your Name</label>
+                            <input  type="text"
+                                    name="name"
+                                    value="{{ old('name') }}"
+                                    class="form-control @error('name') is-invalid @enderror"/>
+                            @error('name') <div class="text-muted">{{ $message }}</div> @enderror
                         </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Message</label>
-                        <textarea type="text" name="widget-contact-form-message" required rows="5" class="form-control required" placeholder="Enter your Message"></textarea>
-                    </div>
-                    <div class="form-group">
+                        <div class="form-group col-md-12">
+                            <label for="email" class="form-control-label">Your Email</label>
+                            <input  type="text"
+                                    name="email"
+                                    value="{{ old('email') }}"
+                                    class="form-control @error('email') is-invalid @enderror"/>
+                            @error('email') <div class="text-muted">{{ $message }}</div> @enderror
+                        </div>
+                        <div class="form-group col-md-12">
+                            <label for="subject" class="form-control-label">Subject</label>
+                            <input  type="text"
+                                    name="subject"
+                                    value="{{ old('subject') }}"
+                                    class="form-control @error('subject') is-invalid @enderror"/>
+                            @error('subject') <div class="text-muted">{{ $message }}</div> @enderror
+                        </div>
+                        <div class="form-group col-lg-12">
+                        <div class="form-group">
+                            <label for="message" class="form-control-label">Your Message</label>
+                            <textarea name="message"
+                                    class="form-control @error('message') is-invalid @enderror">{{ old('message')}}</textarea>
+                            @error('message') <div class="text-muted">{{ $message }}</div> @enderror
+                          </div>
+                        </div>
+                    {{-- <div class="form-group">
                         <script src='https://www.google.com/recaptcha/api.js'></script>
                         <div class="g-recaptcha" data-sitekey="6LddCxAUAAAAAKOg0-U6IprqOZ7vTfiMNSyQT2-M"></div>
+                    </div> --}}
+                    {{-- <button class="btn btn-primary" type="submit" id="form-submit"><i class="fa fa-paper-plane"></i>&nbsp;Send message</button> --}}
+                    <div class="form-group col-md-12">
+                    <div class="text-right" style="padding-right: 8px">
+                        <div class="form-group">
+                            <button class="btn btn-primary btn-sm" type="submit">
+                                <i class="fa fa-paper-plane"></i>&nbsp;Send Message
+                            </button>
+                        </div>
                     </div>
-                    <button class="btn btn-primary" type="submit" id="form-submit"><i class="fa fa-paper-plane"></i>&nbsp;Send message</button>
+                    </div>
                 </form>
             </div>
         </div>

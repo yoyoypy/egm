@@ -21,7 +21,8 @@ Route::prefix('admin')->middleware('auth')->group( function() {
 });
 
 Route::get('/', 'HomeController@index');
-Route::get('contact-us', 'ContactController@index');
+Route::get('contact-us', 'ContactController@create');
+Route::post('contact-us', 'ContactController@store');
 Route::get('about-us', 'AboutController@index');
 
 //product page
@@ -37,4 +38,4 @@ Route::get('blog/{slug}', 'BlogController@show');
 
 
 
-Auth::routes(['register' => false]);
+Auth::routes(['register' => true]);
