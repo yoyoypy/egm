@@ -37,6 +37,7 @@
                 </div>
             </div>
             <div class="col-lg-6">
+                 @include('flash::message')
                 <form action="contact-us" method="post">
                     @csrf
                     <div class="row">

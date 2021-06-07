@@ -6,7 +6,7 @@
         <meta http-equiv="content-type" content="text/html; charset=utf-8" />
         <!-- <meta name="author" content="EGM" />
         <meta name="description" content="PT. Endo Global Medikatama"> -->
-        <link rel="icon" type="image/png" href="images/favicon.png">
+        <link rel="icon" type="image/png" href="images/favicon.ico">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <!-- Document title -->
         <title>Welcome To PT. Endo Global Medikatama</title>

@@ -1,12 +1,16 @@
 @component('mail::message')
-# Introduction
+# Hello, New Customer send you a message
 
-The body of your message.
+<strong>Customer Name : {{ $data['name'] }}</strong><br>
+<strong>Customer Email : {{ $data['email'] }}</strong>
 
-@component('mail::button', ['url' => ''])
-Button Text
-@endcomponent
+<strong>Subject : {{ $data['subject'] }}</strong>
 
-Thanks,<br>
+<strong>Message : {{ $data['message']}}</strong>
+
+
+<a href="mailto:{{$data['email']}}?subject={{$data['subject']}}">Click Here To Reply</a>
+
+Thanks, System<br>
 {{ config('app.name') }}
 @endcomponent

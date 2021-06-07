@@ -15,14 +15,16 @@ class ContactController extends Controller
 
     public function store()
     {
-        //Mail::to('info@egm.co.id')->send(new Contact($contact));
         $data = request()->validate([
             'name' => 'required',
             'email' => 'required|email',
             'subject' => 'required',
             'message' => 'required'
         ]);
-        //dd($request()-all());
-        Mail::to('info@egm.co.id')->send(new ContactFormMail());
+
+        Mail::to('info@egm.co.id')->send(new ContactFormMail($data));
+
+        flash('Thanks For Your Message! We Will Get In Touch Soon!')->success();
+        return view('frontend.contact');
     }
 }

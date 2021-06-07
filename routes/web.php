@@ -33,8 +33,8 @@ Route::get('about-us', 'AboutController@index');
 // Route::get('category', 'CategoryController@index');
 // Route::get('category/{slug}', 'CategoryController@show');
 
-Route::get('blog', 'BlogController@index');
-Route::get('blog/{slug}', 'BlogController@show');
+Route::get('blog', 'BlogViewController@index');
+Route::get('blog/{slug}', 'BlogViewController@show');
 
 
 
