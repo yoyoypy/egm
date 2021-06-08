@@ -46,27 +46,22 @@
                     <nav>
                         <ul>
                             <li><a href="/">Home</a></li>
-                            <li class="dropdown"><a href="#">Our Product</a>
+                            <li class="dropdown"><a href="product">Our Product</a>
                                 <ul class="dropdown-menu">
-                                    <li class="dropdown-submenu"><a href="#">Solar Panel</a>
+                                @foreach ( $categories as $category)
+                                    <li class="dropdown-submenu"><a href="category/{{$category->slug}}">{{$category->category}}</a>
+                                        @foreach ( $category->Product as $product )
                                         <ul class="dropdown-menu">
-                                            <li><a href="#">FY Solar</a></li>
-                                            <li><a href="#">Solar Born</a></li>
+                                            <li><a href="product/{{$product->slug}}">{{$product->product_name}}</a></li>
                                         </ul>
+                                        @endforeach
                                     </li>
-                                    <li class="dropdown-submenu"><a href="#">Smart Street Light</a>
-                                        <ul class="dropdown-menu">
-                                            <li><a href="#">lorem ipsum</a></li>
-                                            <li><a href="#">lorem ipsum</a></li>
-                                            <li><a href="#">lorem ipsum</a></li>
-                                            <li><a href="#">lorem ipsum</a></li>
-                                        </ul>
-                                    </li>
+                                @endforeach
                                 </ul>
                             </li>
-                            <li class="dropdown mega-menu-item"><a href="about-us">About Us</a></li>
-                            <li class="dropdown mega-menu-item"><a href="contact-us">Contact Us</a></li>
-                            <li class="dropdown mega-menu-item"><a href="blog">Blog</a></li>
+                            <li class="dropdown mega-menu-item"><a href="../about-us">About Us</a></li>
+                            <li class="dropdown mega-menu-item"><a href="../contact-us">Contact Us</a></li>
+                            <li class="dropdown mega-menu-item"><a href="../blog">Blog</a></li>
                         </ul>
                     </nav>
                 </div>

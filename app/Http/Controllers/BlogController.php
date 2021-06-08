@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Blog;
+use App\Product;
+use App\Category;
 use App\Http\Requests\BlogRequest;
 use Illuminate\Support\Str;
 

@@ -9,7 +9,7 @@
                             </div>
                             <div class="widget">
                                 <div class="widget-title">PT. Endo Global Medikatama</div>
-                                <p class="mb-5">Supplier energi baru dan terbarukan. <br>Gedung IZ Plaza Lantai 5, Jl. Pramuka Raya Kav 150, Utan kayu utara, Matraman, Jakarta timur 13120, Indonesia</p>
+                                <p class="mb-5">Supplier energi baru dan terbarukan. <br>Gedung IS Plaza Lantai 5, Jl. Pramuka Raya Kav 150, Utan kayu utara, Matraman, Jakarta timur 13120, Indonesia</p>
                             </div>
                             <div class="social-icons m-t-30 social-icons-colored">
                                 <ul>

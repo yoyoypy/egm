@@ -26,15 +26,17 @@ Route::post('contact-us', 'ContactController@store');
 Route::get('about-us', 'AboutController@index');
 
 //product page
-// Route::prefix('product' , 'ProductController@index')->group( function(){
-//     Route::get('product/{slug}', 'ProductController@view');
-// });
+Route::prefix('product' , 'ProductController@index')->group( function(){
+     Route::get('product/{slug}', 'ProductController@view');
+    });
 
-// Route::get('category', 'CategoryController@index');
-// Route::get('category/{slug}', 'CategoryController@show');
+Route::get('category', 'CategoryController@index');
+Route::get('category/{slug}', 'CategoryController@show');
 
 Route::get('blog', 'BlogViewController@index');
 Route::get('blog/{slug}', 'BlogViewController@show');
+
+Route::get('about-us', 'AboutController@index');
 
 
 

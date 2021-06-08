@@ -20,15 +20,15 @@
         <!-- Blog -->
         <div id="blog" class="grid-layout post-3-columns m-b-30" data-item="post-item">
             <!-- Post item-->
-            @forelse ( $items as $item )
+            @forelse ( $blogs as $blog )
             <div class="post-item border">
                 <div class="post-item-wrap">
                     <div class="post-item-description">
-                        <span class="post-meta-date"><i class="fa fa-calendar-o"></i>{{ $item->created_at }}</span>
-                        <h2><a href="blog/{{ $item->slug }}">{{ $item->title }}
+                        <span class="post-meta-date"><i class="fa fa-calendar-o"></i>{{ $blog->created_at }}</span>
+                        <h2><a href="blog/{{ $blog->slug }}">{{ $blog->title }}
                             </a></h2>
-                        <p>{!! $item->description !!}</p>
-                        <a href="blog/{{ $item->slug }}" class="item-link">Read More <i class="icon-chevron-right"></i></a>
+                        <p>{!! $blog->description !!}</p>
+                        <a href="blog/{{ $blog->slug }}" class="item-link">Read More <i class="icon-chevron-right"></i></a>
                     </div>
                 </div>
             </div>
