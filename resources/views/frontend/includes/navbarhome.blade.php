@@ -49,7 +49,8 @@
                             <li class="dropdown"><a href="product">Our Product</a>
                                 <ul class="dropdown-menu">
                                 @foreach ( $categories as $category)
-                                    <li class="dropdown-submenu"><a href="category/{{$category->slug}}">{{$category->category}}</a>
+                                    {{-- <li class="dropdown-submenu"><a href="category/{{$category->slug}}">{{$category->category}}</a> --}}
+                                    <li class="dropdown-submenu"><a>{{$category->category}}</a>
                                         @foreach ( $category->Product as $product )
                                         <ul class="dropdown-menu">
                                             <li><a href="product/{{$product->slug}}">{{$product->product_name}}</a></li>

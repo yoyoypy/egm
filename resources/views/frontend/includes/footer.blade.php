@@ -15,7 +15,7 @@
                                 <ul>
                                     <li class="social-facebook"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
                                     <li class="social-twitter"><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                    <li class="social-whatsapp"><a href="https://api.whatsapp.com/send?phone=6281806129287"><i class="fab fa-whatsapp"></i></a></li>
+                                    <li class="social-whatsapp"><a href="https://wa.me/6281806129287"><i class="fab fa-whatsapp"></i></a></li>
                                 </ul>
                             </div>
                         </div>
