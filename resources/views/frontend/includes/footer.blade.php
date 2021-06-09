@@ -9,13 +9,13 @@
                             </div>
                             <div class="widget">
                                 <div class="widget-title">PT. Endo Global Medikatama</div>
-                                <p class="mb-5">Supplier energi baru dan terbarukan. <br>Gedung IZ Plaza Lantai 5, Jl. Pramuka Raya Kav 150, Utan kayu utara, Matraman, Jakarta timur 13120, Indonesia</p>
+                                <p class="mb-5">Supplier energi baru dan terbarukan. <br>Gedung IS Plaza Lantai 5, Jl. Pramuka Raya Kav 150, Utan kayu utara, Matraman, Jakarta timur 13120, Indonesia</p>
                             </div>
                             <div class="social-icons m-t-30 social-icons-colored">
                                 <ul>
                                     <li class="social-facebook"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
                                     <li class="social-twitter"><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                    <li class="social-whatsapp"><a href="https://api.whatsapp.com/send?phone=6281806129287"><i class="fab fa-whatsapp"></i></a></li>
+                                    <li class="social-whatsapp"><a href="https://wa.me/6281806129287"><i class="fab fa-whatsapp"></i></a></li>
                                 </ul>
                             </div>
                         </div>
@@ -25,8 +25,8 @@
                                     <div class="widget">
                                         <div class="widget-title">Pages</div>
                                         <ul class="list">
-                                            <li><a href="#">Blog</a></li>
-                                            <li><a href="#">Contact Us</a></li>
+                                            <li><a href="blog">Blog</a></li>
+                                            <li><a href="contact-us">Contact Us</a></li>
                                         </ul>
                                     </div>
                                 </div>

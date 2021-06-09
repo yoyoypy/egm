@@ -21,20 +21,23 @@ Route::prefix('admin')->middleware('auth')->group( function() {
 });
 
 Route::get('/', 'HomeController@index');
-Route::get('contact-us', 'ContactController@index');
+Route::get('contact-us', 'ContactController@create');
+Route::post('contact-us', 'ContactController@store');
 Route::get('about-us', 'AboutController@index');
 
 //product page
-// Route::prefix('product' , 'ProductController@index')->group( function(){
-//     Route::get('product/{slug}', 'ProductController@view');
-// });
+Route::get('product' , 'ProductController@index');
+Route::get('product/{slug}', 'ProductController@show');
 
-// Route::get('category', 'CategoryController@index');
-// Route::get('category/{slug}', 'CategoryController@show');
+//Route::get('category/{slug}', 'CategoryController@show');
+Route::redirect('category', 'product');
+//Route::get('category', 'CategoryController@show');
 
-Route::get('blog', 'BlogController@index');
-Route::get('blog/{slug}', 'BlogController@show');
+Route::get('blog', 'BlogViewController@index');
+Route::get('blog/{slug}', 'BlogViewController@show');
+
+Route::get('about-us', 'AboutController@index');
 
 
 
-Auth::routes(['register' => false]);
+Auth::routes(['register' => true]);

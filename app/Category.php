@@ -28,8 +28,8 @@ class Category extends Model
     //  *
     //  * @return \Illuminate\Database\Eloquent\Relations\hasMany
     //  */
-    // public function ProductList()
-    // {
-    //     return $this->hasMany(Application::class, 'product_id');
-    // }
+     public function Product()
+     {
+         return $this->hasMany(Product::class, 'category_id', 'id');
+     }
 }

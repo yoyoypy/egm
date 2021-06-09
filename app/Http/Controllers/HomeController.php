@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Category;
+use App\Blog;
 
 class HomeController extends Controller
 {
@@ -13,6 +15,13 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('frontend.home');
+        $blogs      = Blog::all();
+        $categories = Category::with('Product')->get();
+
+        return view('frontend.home')->with([
+            'blogs'         => $blogs,
+            'categories'    => $categories
+        ]);
+
     }
 }

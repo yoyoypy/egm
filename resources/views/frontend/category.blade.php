@@ -22,15 +22,11 @@
 <section id="page-content">
     <div class="container">
         <!-- Portfolio Filter -->
-        {{-- <nav class="grid-filter gf-outline" data-layout="#portfolio">
+        <nav class="grid-filter gf-outline" data-layout="#portfolio">
             <ul>
-                <li class="active"><a href="/product" data-category="/product">Show All</a></li>
-                @foreach ( $categories as $category)
-                <li><a href="category/{{$category->slug}}" data-category="{{$category->id}}">{{$category->category}}</a></li>
-                @endforeach
+                <li class="active"><a href="{{$categories->slug}}" data-category="{{$categories->slug}}">{{$categories->category}}</a></li>
             </ul>
-            <div class="grid-active-title">Show All</div>
-        </nav> --}}
+        </nav>
         <!-- end: Portfolio Filter -->
         <!-- Portfolio -->
         <div id="portfolio" class="grid-layout portfolio-3-columns" data-margin="20">
