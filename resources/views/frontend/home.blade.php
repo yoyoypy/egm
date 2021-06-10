@@ -50,7 +50,7 @@
         </section>
         <!-- end: WELCOME -->
         <!-- WHAT WE DO -->
-        <section class="background-grey">
+        {{-- <section class="background-grey">
             <div class="container">
                 <div class="heading-text heading-section">
                     <h2>WHAT WE DO</h2>
@@ -95,11 +95,11 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> --}}
         <!-- END WHAT WE DO -->
 
         <!-- COUNTERS -->
-        <section class="text-light p-t-150 p-b-150 " data-bg-parallax="{{ asset('frontend/images/parallaxhome2.jpg')}}">
+        {{-- <section class="text-light p-t-150 p-b-150 " data-bg-parallax="{{ asset('frontend/images/parallaxhome2.jpg')}}">
             <div class="container">
                 <div class="heading-text heading-section text-center">
                     <h2>SERVICES</h2>
@@ -169,8 +169,74 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> --}}
         <!-- end: COUNTERS -->
+        <!-- start: PRODUCT SECTION -->
+            <!-- SECTION DEFAULT (LIGHT) -->
+            <section class="p-b-0">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-lg-5"><video autoplay muted><source src="{{asset('frontend/video/ineflyvideo.mp4')}}" type="video/mp4"></video></div>
+                        <div class="col-lg-7">
+                            <div class="heading-text heading-section mt-5">
+                                <h1>Intefly Smart Street Light</h1>
+                                <p>Nulla varius consequat magna, id molestie ipsum volutpat quis. A true story, that never been told!. Fusce id mi diam, non ornare orci. Pellentesque ipsum erat, facilisis ut venenatis eu, sodales vel dolor.</p>
+                                <a class="btn btn-primary" href="/product/#"><i class="fa fa-eye"></i> See this product</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- end: SECTION DEFAULT (LIGHT) -->
+            <!-- SECTION GREY -->
+            <section class="background-grey p-b-0">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-lg-7">
+                            <div class="heading-text heading-section text-right mt-5">
+                                <h1>Wind Turbine</h1>
+                                <p>Nulla varius consequat magna, id molestie ipsum volutpat quis. A true story, that never been told!. Fusce id mi diam, non ornare orci. Pellentesque ipsum erat, facilisis ut venenatis eu, sodales vel dolor.</p>
+                                <a class="btn btn-primary" href="/product/#"><i class="fa fa-eye"></i> See this product</a>
+                            </div>
+                        </div>
+                        <div class="col-lg-5"> <img alt="" src="{{asset('frontend/images/wind-turbine-egm.png')}}"> </div>
+                    </div>
+                </div>
+            </section>
+            <!-- end: SECTION GREY -->
+            <!-- SECTION DEFAULT (LIGHT) -->
+            <section class="p-b-0">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-lg-5"> <img alt="" src="{{asset('frontend/images/solar-panel.jpg')}}"> </div>
+                        <div class="col-lg-7">
+                            <div class="heading-text heading-section mt-5">
+                                <h1>Solar Panel</h1>
+                                <p>Nulla varius consequat magna, id molestie ipsum volutpat quis. A true story, that never been told!. Fusce id mi diam, non ornare orci. Pellentesque ipsum erat, facilisis ut venenatis eu, sodales vel dolor.</p>
+                                <a class="btn btn-primary" href="/product/#"><i class="fa fa-eye"></i> See this product</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- end: SECTION DEFAULT (LIGHT) -->
+            <!-- SECTION GREY -->
+            <section class="background-grey p-b-0">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-lg-7">
+                            <div class="heading-text heading-section text-right mt-5">
+                                <h1>All-in-One Solar Street Light</h1>
+                                <p>Nulla varius consequat magna, id molestie ipsum volutpat quis. A true story, that never been told!. Fusce id mi diam, non ornare orci. Pellentesque ipsum erat, facilisis ut venenatis eu, sodales vel dolor.</p>
+                                <a class="btn btn-primary" href="/product/#"><i class="fa fa-eye"></i> See this product</a>
+                            </div>
+                        </div>
+                        <div class="col-lg-5"> <img alt="" src="{{asset('frontend/images/all-in-one-street-light-egm.png')}}"> </div>
+                    </div>
+                </div>
+            </section>
+            <!-- end: SECTION GREY -->
+        <!-- end: PRODUCT SECTION -->
         <!-- BLOG -->
         <section class="content background-grey">
             <div class="container">
