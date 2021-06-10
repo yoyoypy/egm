@@ -7,16 +7,18 @@
                 <a href="/">
                     <img class="logo-default" src="{{ asset('logo-with-name.png')}}" alt="#">
                     <img class="logo-dark" src="{{ asset('logo-with-name2.png')}}" alt="#">
+                        {{-- <span class="logo-default">EGM</span>
+                        <span class="logo-dark">EGM</span> --}}
                 </a>
             </div>
             <!--End: Logo-->
             <!-- Search -->
-            <!-- <div id="search"><a id="btn-search-close" class="btn-search-close" aria-label="Close search form"><i class="icon-x"></i></a>
+            {{-- <div id="search"><a id="btn-search-close" class="btn-search-close" aria-label="Close search form"><i class="icon-x"></i></a>
                 <form class="search-form" action="search-results-page.html" method="get">
                     <input class="form-control" name="q" type="text" placeholder="Type & Search..." />
                     <span class="text-muted">Start typing & press "Enter" or "ESC" to close</span>
                 </form>
-            </div> -->
+            </div> --}}
             <!-- end: search -->
             <!--Header Extras-->
             <div class="header-extras">

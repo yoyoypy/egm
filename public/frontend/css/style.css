@@ -2081,7 +2081,8 @@ Main menu - Vertical
     margin-left: 0; }
 
 #mainMenu-trigger {
-  position: absolute;
+  position: relative;
+  top: 30px;
   opacity: 0;
   visibility: hidden;
   height: 80px;
@@ -2369,7 +2370,10 @@ Main Menu: Responsive
 
 @media (max-width: 1024px) {
   .header-extras {
-    float: left; }
+    position: relative;
+    top: 30px;
+    left: 15px;
+    float: right; }
     .header-extras > ul .p-dropdown > a > i,
     .header-extras > ul > li > a > i {
       font-size: 16px !important; }
