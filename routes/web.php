@@ -40,4 +40,4 @@ Route::get('about-us', 'AboutController@index');
 
 
 
-Auth::routes(['register' => true]);
+Auth::routes(['register' => false]);
