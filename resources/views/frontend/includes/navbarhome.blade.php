@@ -53,11 +53,11 @@
                                 @foreach ( $categories as $category)
                                     {{-- <li class="dropdown-submenu"><a href="category/{{$category->slug}}">{{$category->category}}</a> --}}
                                     <li class="dropdown-submenu"><a>{{$category->category}}</a>
-                                        @foreach ( $category->Product as $product )
                                         <ul class="dropdown-menu">
+                                            @foreach ( $category->Product as $product )
                                             <li><a href="product/{{$product->slug}}">{{$product->product_name}}</a></li>
+                                            @endforeach
                                         </ul>
-                                        @endforeach
                                     </li>
                                 @endforeach
                                 </ul>
