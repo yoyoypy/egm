@@ -29,6 +29,10 @@
                       <td>{{ $item->product_name }}</td>
                       <td>{{ $item->Category->category }}</td>
                       <td>
+                        <a href="{{ route('productlist.brochure', $item->id) }}" class="btn btn-info btn-sm">
+                            {{-- <a href="#" class="btn btn-info btn-sm"> --}}
+                             <i class="fa fa-picture-o"></i>
+                               </a>
                          <a href="{{ route('productlist.gallery', $item->id) }}" class="btn btn-info btn-sm">
                          {{-- <a href="#" class="btn btn-info btn-sm"> --}}
                           <i class="fa fa-picture-o"></i>

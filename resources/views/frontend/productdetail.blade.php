@@ -64,7 +64,12 @@
                 <div class="portfolio-attributes">
                     <div class="attribute"><strong>Category:</strong> {{$products->Category->category}}</div>
                 </div>
-                <div> <a href="https://wa.me/6281806129287?text=hai%20saya%20tertarik%20dengan%20produk%20{{$products->product_name}}" class="btn btn-dark btn-outline"><i class="fab fa-whatsapp"></i> Ask us for product detail</a></div>
+                <div> <a href="https://wa.me/6281806129287?text=hai%20saya%20tertarik%20dengan%20produk%20{{$products->product_name}}" class="btn btn-dark btn-outline"><i class="fab fa-whatsapp"></i> Ask us for product detail</a>
+                @forelse ( $products->Brochures as $brochure )
+                <a href="{{ $brochure->brochure }}" class="btn btn-primary" style="float: right"><i class="fa fa-download"></i>  Download Product Brochure Here</a></div>
+                @empty
+
+                @endforelse
             </div>
         </div>
     </div>

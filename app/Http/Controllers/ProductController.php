@@ -7,6 +7,7 @@ use App\Category;
 use App\Blog;
 use App\Product;
 use App\Gallery;
+use App\Brochure;
 
 class ProductController extends Controller
 {
@@ -27,7 +28,7 @@ class ProductController extends Controller
     {
         $blogs      = Blog::all();
         $categories = Category::with('Product')->get();
-        $products   = Product::with('Category', 'Galleries')->where('slug', $slug)->firstOrFail();
+        $products   = Product::with('Category', 'Galleries', 'Brochures')->where('slug', $slug)->firstOrFail();
 
         return view('frontend.productdetail')->with([
             'blogs'         => $blogs,

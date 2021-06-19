@@ -16,8 +16,11 @@ Route::prefix('admin')->middleware('auth')->group( function() {
     Route::resource('productlist', 'ProductListController');
     Route::resource('productgallery', 'ProductGalleryController');
     Route::resource('productcategory', 'ProductCategoryController');
+    Route::resource('brochure', 'BrochureController');
     Route::get('productlist/{id}/gallery', 'ProductListController@gallery')
     ->name('productlist.gallery');
+    Route::get('productlist/{id}/brochure', 'ProductListController@brochure')
+    ->name('productlist.brochure');
 });
 
 Route::get('/', 'HomeController@index');

@@ -43,4 +43,14 @@ class Product extends Model
     {
         return $this->hasMany(Gallery::class, 'products_id');
     }
+
+    /**
+     * Get all of the Brochures for the Product
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function Brochures()
+    {
+        return $this->hasMany(Brochure::class, 'products_id');
+    }
 }

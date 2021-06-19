@@ -7,6 +7,7 @@ use Illuminate\Support\Str;
 use App\Product;
 use App\Category;
 use App\Gallery;
+use App\Brochure;
 use App\Http\Requests\ProductRequest;
 
 class ProductListController extends Controller
@@ -123,6 +124,19 @@ class ProductListController extends Controller
             ->get();
 
         return view('backend.pages.product.gallery')->with([
+            'product' => $product,
+            'items' => $items
+        ]);
+    }
+
+    public function brochure(Request $request, $id)
+    {
+        $product = Product::findorFail($id);
+        $items = Brochure::with('product')
+            ->where('products_id', $id)
+            ->get();
+
+        return view('backend.pages.product.brochure')->with([
             'product' => $product,
             'items' => $items
         ]);

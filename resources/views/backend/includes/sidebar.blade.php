@@ -23,6 +23,11 @@
                         <a href="{{ route ('productgallery.create') }}"> <i class="menu-icon fa fa-plus"></i>Tambah Photo Product</a>
                     </li> --}}
 
+                    <li class="menu-title">Product brochure</li><!-- /.menu-title -->
+                    <li class="">
+                        <a href="{{ route ('brochure.index') }}"> <i class="menu-icon fa fa-list"></i>Lihat Product Brochure</a>
+                    </li>
+
                     <li class="menu-title">Product Category</li><!-- /.menu-title -->
                     <li class="">
                         <a href="{{ route ('productcategory.index') }}"> <i class="menu-icon fa fa-list"></i>Lihat Category</a>
