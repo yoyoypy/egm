@@ -195,7 +195,7 @@
                             @endforeach
                         <div class="col-lg-7">
                             <div class="heading-text heading-section mt-5">
-                                <h1>{{$product->id}}. {{ $product->product_name }}</h1>
+                                <h1>{{$product->position}}. {{ $product->product_name }}</h1>
                                 <p>{!! $product->product_description !!}</p>
                                 <a class="btn btn-primary" href="/product/{{ $product->slug }}"><i class="fa fa-eye"></i> See this product</a>
                             </div>
