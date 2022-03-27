@@ -35,7 +35,7 @@
         </div>
         <!--end: Inspiro Slider -->
         <!-- WELCOME -->
-       <section id="welcome" class="p-b-0">
+       {{-- <section id="welcome" class="p-b-0">
             <div class="container" style="text-align:center">
                 <div class="row" data-animate="fadeInUp">
                     <div class="col-lg-12">
@@ -43,7 +43,7 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> --}}
         <!-- end: WELCOME -->
         <!-- WHAT WE DO -->
         {{-- <section class="background-grey">
