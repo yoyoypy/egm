@@ -71,7 +71,7 @@
                 @forelse ($products->Video as $video)
                     <div class="grid-item">
                         <video height="450" controls>
-                                <source src="{{ url($products->video) }}" type="video/mp4">
+                                <source src="{{ url($video->video) }}" type="video/mp4">
                                 No video support.
                         </video>
                     </div>
