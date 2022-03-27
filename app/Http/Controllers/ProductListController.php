@@ -52,6 +52,7 @@ class ProductListController extends Controller
         Product::create([
             'slug' => Str::slug($request->product_name),
             'category_id' => $request->input('category_id'),
+            'position' => $request->input('position'),
             'product_name' => $request->input('product_name'),
             'product_description' => $request->input('product_description')
         ]);
