@@ -7,6 +7,7 @@ use Illuminate\Support\Str;
 use App\Product;
 use App\Brochure;
 use App\Http\Requests\BrochureRequest;
+use Illuminate\Http\File;
 
 class BrochureController extends Controller
 {
@@ -47,8 +48,9 @@ class BrochureController extends Controller
     public function store(BrochureRequest $request)
     {
         $data = $request->all();
-        $data['brochure'] = $request->file('brochure')->store(
-            'assets/brochure', 'public'
+        $filename = $request->file('brochure')->getClientOriginalName();
+        $data['brochure'] = $request->file('brochure')->storeAs(
+            'assets/brochure', $filename, 'public'
         );
 
         Brochure::create($data);

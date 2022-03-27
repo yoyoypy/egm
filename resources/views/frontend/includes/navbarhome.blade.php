@@ -56,7 +56,7 @@
                                         <ul class="dropdown-menu">
                                             @foreach ( $category->Product as $product )
                                             <li><a href="product/{{$product->slug}}">{{$product->product_name}}</a></li>
-                                            @endforeach
+                                        @endforeach
                                         </ul>
                                     </li>
                                 @endforeach
@@ -64,7 +64,7 @@
                             </li>
                             <li class="dropdown mega-menu-item"><a href="../about-us">About Us</a></li>
                             <li class="dropdown mega-menu-item"><a href="../contact-us">Contact Us</a></li>
-                            <li class="dropdown mega-menu-item"><a href="../blog">Blog</a></li>
+                            {{--<li class="dropdown mega-menu-item"><a href="../blog">Blog</a></li>--}}
                         </ul>
                     </nav>
                 </div>

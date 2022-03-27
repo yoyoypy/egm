@@ -82,7 +82,7 @@ class ProductCategoryController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Category $request, $id)
+    public function update(CategoryRequest $request, $id)
     {
         $data = $request->all();
 

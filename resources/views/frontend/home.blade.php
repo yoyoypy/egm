@@ -10,7 +10,7 @@
                     <div class="slide-captions text-center text-light">
                         <!-- Captions -->
                         <h1 data-caption-animate="zoom-out">WELCOME TO <br>ENDO GLOBAL MEDIKATAMA</h1>
-                        <p>Produsen berbagai jenis lampu jalan yang dilengkapi dengan fitur tambahan yang menarik seperti Mobile Network, Smart Lighting, Environment Monitoring, Camera, LED, Emergent Broadcast, Electrombile Carging.</p>
+                        <p>Supplier berbagai perlengkapan  Mobile Network, Smart Lighting, Environment Monitoring, Camera, LED, Emergent Broadcast, Electromobile Charging, Smart City, WIFI system.</p>
                         <div><a href="#" class="btn btn-primary scroll-to">Our Product</a></div>
                         </span>
                         <!-- end: Captions -->
@@ -19,7 +19,7 @@
             </div>
             <!-- end: Slide 1 -->
             <!-- Slide 2 -->
-            <div class="slide" data-bg-video="{{ asset('frontend/video/slider1.mp4')}}">
+          {{--  <div class="slide" data-bg-video="{{ asset('frontend/video/slider1.mp4')}}">
                 <div class="bg-overlay"></div>
                 <div class="container">
                     <div class="slide-captions text-left text-light">
@@ -30,20 +30,16 @@
                         <!-- end: Captions -->
                     </div>
                 </div>
-            </div>
+            </div>--}}
             <!-- end: Slide 2 -->
         </div>
         <!--end: Inspiro Slider -->
         <!-- WELCOME -->
-        <section id="welcome" class="p-b-0">
-            <div class="container">
-                <div class="heading-text heading-section text-center m-b-40" data-animate="fadeInUp">
-                    <h2>WELCOME TO THE WORLD OF RENEWABLE ENERGY</h2>
-                    <span class="lead">Create A Good Environment, Beautiful Nature, and rare feathers!</span>
-                </div>
+       <section id="welcome" class="p-b-0">
+            <div class="container" style="text-align:center">
                 <div class="row" data-animate="fadeInUp">
                     <div class="col-lg-12">
-                        <img class="img-fluid" src="{{ asset('frontend/images/parallaxhome.jpg')}}" alt="#">
+                        <img class="img-fluid" src="{{ asset('frontend/images/intefly-home.jpg')}}" alt="#">
                     </div>
                 </div>
             </div>
@@ -173,72 +169,45 @@
         <!-- end: COUNTERS -->
         <!-- start: PRODUCT SECTION -->
             <!-- SECTION DEFAULT (LIGHT) -->
+           {{-- <section class="p-b-0">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-lg-5"><video autoplay autobuffer  playsinline><source src="{{asset('frontend/video/ineflyvideo.mp4')}}" type="video/mp4"></video></div>
+                        <div class="col-lg-7">
+                            <div class="heading-text heading-section mt-5">
+                                <h1>1. Smart Street Light</h1>
+                                <p>Intefly Smart City IOT Street Light adalah produk AI yang diteliti dan diproduksi oleh Shenzhen INTEFLY Electronics Co., Ltd. Produk ini mengadopsi desain struktur produk modular, yang mengintegrasikan modul komunikasi 4G / 5G, modul kamera AI definisi tinggi, iklan super jernih modul layar besar, modul alarm keamanan, modul pemantauan lingkungan dan modul tumpukan pengisian cerdas.</p>
+                                <a class="btn btn-primary" href="/product/intefly-smart-city-iot-street-light"><i class="fa fa-eye"></i> See this product</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>--}}
+            <!-- end: SECTION DEFAULT (LIGHT) -->
+             <!-- SECTION DEFAULT (LIGHT) -->
+            @foreach ( $products as $product)
             <section class="p-b-0">
                 <div class="container">
                     <div class="row align-items-center">
-                        <div class="col-lg-5"><video autoplay muted><source src="{{asset('frontend/video/ineflyvideo.mp4')}}" type="video/mp4"></video></div>
+                        <div class="col-lg-5">
+                            @foreach ( $product->Galleries->take(1) as $gallery)
+                            <img alt="#" src="{{$gallery->photo}}" style="max-width:400px"> </div>
+                            @endforeach
                         <div class="col-lg-7">
                             <div class="heading-text heading-section mt-5">
-                                <h1>Intefly Smart Street Light</h1>
-                                <p>Nulla varius consequat magna, id molestie ipsum volutpat quis. A true story, that never been told!. Fusce id mi diam, non ornare orci. Pellentesque ipsum erat, facilisis ut venenatis eu, sodales vel dolor.</p>
-                                <a class="btn btn-primary" href="/product/#"><i class="fa fa-eye"></i> See this product</a>
+                                <h1>{{$product->id}}. {{ $product->product_name }}</h1>
+                                <p>{!! $product->product_description !!}</p>
+                                <a class="btn btn-primary" href="/product/{{ $product->slug }}"><i class="fa fa-eye"></i> See this product</a>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
+            @endforeach
             <!-- end: SECTION DEFAULT (LIGHT) -->
-            <!-- SECTION GREY -->
-            <section class="background-grey p-b-0">
-                <div class="container">
-                    <div class="row align-items-center">
-                        <div class="col-lg-7">
-                            <div class="heading-text heading-section text-right mt-5">
-                                <h1>Wind Turbine</h1>
-                                <p>Nulla varius consequat magna, id molestie ipsum volutpat quis. A true story, that never been told!. Fusce id mi diam, non ornare orci. Pellentesque ipsum erat, facilisis ut venenatis eu, sodales vel dolor.</p>
-                                <a class="btn btn-primary" href="/product/#"><i class="fa fa-eye"></i> See this product</a>
-                            </div>
-                        </div>
-                        <div class="col-lg-5"> <img alt="" src="{{asset('frontend/images/wind-turbine-egm.png')}}"> </div>
-                    </div>
-                </div>
-            </section>
-            <!-- end: SECTION GREY -->
-            <!-- SECTION DEFAULT (LIGHT) -->
-            <section class="p-b-0">
-                <div class="container">
-                    <div class="row align-items-center">
-                        <div class="col-lg-5"> <img alt="" src="{{asset('frontend/images/solar-panel.jpg')}}"> </div>
-                        <div class="col-lg-7">
-                            <div class="heading-text heading-section mt-5">
-                                <h1>Solar Panel</h1>
-                                <p>Nulla varius consequat magna, id molestie ipsum volutpat quis. A true story, that never been told!. Fusce id mi diam, non ornare orci. Pellentesque ipsum erat, facilisis ut venenatis eu, sodales vel dolor.</p>
-                                <a class="btn btn-primary" href="/product/#"><i class="fa fa-eye"></i> See this product</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <!-- end: SECTION DEFAULT (LIGHT) -->
-            <!-- SECTION GREY -->
-            <section class="background-grey p-b-0">
-                <div class="container">
-                    <div class="row align-items-center">
-                        <div class="col-lg-7">
-                            <div class="heading-text heading-section text-right mt-5">
-                                <h1>All-in-One Solar Street Light</h1>
-                                <p>Nulla varius consequat magna, id molestie ipsum volutpat quis. A true story, that never been told!. Fusce id mi diam, non ornare orci. Pellentesque ipsum erat, facilisis ut venenatis eu, sodales vel dolor.</p>
-                                <a class="btn btn-primary" href="/product/#"><i class="fa fa-eye"></i> See this product</a>
-                            </div>
-                        </div>
-                        <div class="col-lg-5"> <img alt="" src="{{asset('frontend/images/all-in-one-street-light-egm.png')}}"> </div>
-                    </div>
-                </div>
-            </section>
-            <!-- end: SECTION GREY -->
         <!-- end: PRODUCT SECTION -->
         <!-- BLOG -->
-        <section class="content background-grey">
+     {{--   <section class="content background-grey">
             <div class="container">
                 <div class="heading-text heading-section">
                     <h2>OUR BLOG</h2>
@@ -264,10 +233,10 @@
                     <!-- end: Post item-->
                 </div>
             </div>
-        </section>
+        </section>--}}
         <!-- end: BLOG -->
         <!-- CLIENTS -->
-        <section class="p-t-60">
+       <section class="p-t-60">
             <div class="container">
                 <div class="heading-text heading-section text-center">
                     <h2>OUR PARTNER</h2>

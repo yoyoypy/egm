@@ -28,7 +28,7 @@ class ProductController extends Controller
     {
         $blogs      = Blog::all();
         $categories = Category::with('Product')->get();
-        $products   = Product::with('Category', 'Galleries', 'Brochures')->where('slug', $slug)->firstOrFail();
+        $products   = Product::with('Category', 'Galleries', 'Brochures', 'Video')->where('slug', $slug)->firstOrFail();
 
         return view('frontend.productdetail')->with([
             'blogs'         => $blogs,

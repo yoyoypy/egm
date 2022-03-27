@@ -1,5 +1,7 @@
 <?php
 
+use Illuminate\Support\Facades\Route;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -12,7 +14,7 @@
 */
 Route::prefix('admin')->middleware('auth')->group( function() {
     Route::get('dashboard', 'DashboardController@index');
-    Route::resource('blog', 'BlogController');
+    // Route::resource('blog', 'BlogController');
     Route::resource('productlist', 'ProductListController');
     Route::resource('productgallery', 'ProductGalleryController');
     Route::resource('productcategory', 'ProductCategoryController');
@@ -21,6 +23,9 @@ Route::prefix('admin')->middleware('auth')->group( function() {
     ->name('productlist.gallery');
     Route::get('productlist/{id}/brochure', 'ProductListController@brochure')
     ->name('productlist.brochure');
+    Route::get('productlist/{id}/video', 'ProductListController@video')
+    ->name('productlist.video');
+    Route::resource('productvideo', 'ProductVideoController');
 });
 
 Route::get('/', 'HomeController@index');
@@ -36,8 +41,8 @@ Route::get('product/{slug}', 'ProductController@show');
 Route::redirect('category', 'product');
 //Route::get('category', 'CategoryController@show');
 
-Route::get('blog', 'BlogViewController@index');
-Route::get('blog/{slug}', 'BlogViewController@show');
+// Route::get('blog', 'BlogViewController@index');
+// Route::get('blog/{slug}', 'BlogViewController@show');
 
 Route::get('about-us', 'AboutController@index');
 

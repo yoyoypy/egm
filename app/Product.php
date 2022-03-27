@@ -53,4 +53,14 @@ class Product extends Model
     {
         return $this->hasMany(Brochure::class, 'products_id');
     }
+
+    /**
+     * Get all of the video for the Product
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function Video()
+    {
+        return $this->hasMany(ProductVideo::class, 'product_id', 'id');
+    }
 }

@@ -9,6 +9,7 @@
     <title>PT. Endo Global Medikatama</title>
     <meta name="description" content="PT. Endo Global Medikatama">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
 
    {{-- style --}}
    @stack('before-style')

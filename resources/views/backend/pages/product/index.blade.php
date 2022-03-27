@@ -29,13 +29,17 @@
                       <td>{{ $item->product_name }}</td>
                       <td>{{ $item->Category->category }}</td>
                       <td>
+                        <a href="{{ route('productlist.video', $item->id) }}" class="btn btn-info btn-sm">
+                            {{-- <a href="#" class="btn btn-info btn-sm"> --}}
+                                <i class="fa fa-file-video-o" aria-hidden="true"> View Video</i>
+                               </a>
                         <a href="{{ route('productlist.brochure', $item->id) }}" class="btn btn-info btn-sm">
                             {{-- <a href="#" class="btn btn-info btn-sm"> --}}
-                             <i class="fa fa-picture-o"></i>
+                             <i class="fa fa-file-pdf-o" aria-hidden="true"> View Brochure</i>
                                </a>
                          <a href="{{ route('productlist.gallery', $item->id) }}" class="btn btn-info btn-sm">
                          {{-- <a href="#" class="btn btn-info btn-sm"> --}}
-                          <i class="fa fa-picture-o"></i>
+                          <i class="fa fa-picture-o"> View Image</i>
                             </a>
                         <a href="{{ route('productlist.edit', $item->id) }}" class="btn btn-primary btn-sm">
                           <i class="fa fa-pencil"></i>

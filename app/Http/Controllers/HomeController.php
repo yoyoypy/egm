@@ -2,9 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Category;
-use App\Blog;
+use App\Product;
 
 class HomeController extends Controller
 {
@@ -15,12 +14,14 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $blogs      = Blog::all();
+        // $blogs      = Blog::all();
+        $products   = Product::orderBy('id')->with('Galleries')->orderBy('position')->get();
         $categories = Category::with('Product')->get();
 
         return view('frontend.home')->with([
-            'blogs'         => $blogs,
-            'categories'    => $categories
+            // 'blogs'         => $blogs,
+            'categories'    => $categories,
+            'products'      => $products
         ]);
 
     }

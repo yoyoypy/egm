@@ -1,5 +1,11 @@
 @extends('frontend.layouts.else')
 
+@section('meta')
+         <title>Contact Us | EGM</title>
+         <meta name="description" content="PT. ENDO GLOBAL MEDIKATAMA Gedung IS Plaza Lantai 5, Jl. Pramuka Raya Kav 150, Utan kayu utara, Matraman, Jakarta timur 13120, Indonesia">
+@endsection
+
+
 @section('content')
 <!-- Page title -->
 <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d495.8168704652764!2d106.86669471838532!3d-6.192917468542005!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f53ae0e3ca29%3A0xfba9636463a1ce8b!2sIS%20PLAZA%20BALLROOM!5e0!3m2!1sen!2sid!4v1622801395032!5m2!1sen!2sid" width="600" height="550" style="border:0;" allowfullscreen=""></iframe>

@@ -7,6 +7,7 @@
     </div>
     <div class="card-body card-block">
       <form action="{{ route('productcategory.update' , $item->id) }}" method="POST">
+          @method('PUT')
         @csrf
         <div class="form-group">
           <label for="category" class="form-control-label">Category</label>

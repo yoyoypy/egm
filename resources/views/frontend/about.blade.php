@@ -1,5 +1,10 @@
 @extends('frontend.layouts.else')
 
+@section('meta')
+         <title>About Us | EGM</title>
+         <meta name="description" content="PT. Endo Global Medikatama merupakan sebuah perusahaan yang bergerak pada bidang Konstruksi Mekanikal, Elektrikal, dan Supplier. Menyediakan solusi kebutuhan PJU Pintar Tenaga Surya, PJU Solar Cell, Lampu Jalan LED, PJU Hibrida Surya dan Angin, dan aplikasi tenaga surya lainnya dengan kualitas yang terjamin, layanan prima, harga yang kompetitif. Selain itu, PJU sudah dilengkapi dengan fitur-fitur pintar yang dapat memudahkan para pengguna jalan.">
+@endsection
+
 @section('content')
 <!-- Inspiro Slider -->
 <div id="slider" class="inspiro-slider dots-creative" data-height-xs="360">

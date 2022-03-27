@@ -1,5 +1,12 @@
 @extends('frontend.layouts.else')
 
+@section('meta')
+         <title>{{$products->product_name}} | EGM</title>
+         <meta name="title" content="{{$products->product_name}}">
+         <meta name="keyword" content="{{$products->product_name}}">
+         <meta name="description" content="{!!$products->product_description!!}">
+@endsection
+
 @section('content')
 <!-- Page title -->
 <section id="page-title" style="background-image:url({{ asset('frontend/images/.jpg')}});">
@@ -61,10 +68,19 @@
                     <h2>{{$products->product_name}}</h2>
                     <h3>{!!$products->product_description!!}</h3>
                 </div>
+                @forelse ($products->Video as $video)
+                    <div class="grid-item">
+                        <video height="450" controls>
+                                <source src="{{ url($products->video) }}" type="video/mp4">
+                                No video support.
+                        </video>
+                    </div>
+                @empty
+                @endforelse
                 <div class="portfolio-attributes">
                     <div class="attribute"><strong>Category:</strong> {{$products->Category->category}}</div>
                 </div>
-                <div> <a href="https://wa.me/6281806129287?text=hai%20saya%20tertarik%20dengan%20produk%20{{$products->product_name}}" class="btn btn-dark btn-outline"><i class="fab fa-whatsapp"></i> Ask us for product detail</a>
+                <div> <a href="https://wa.me/6281806129287?text=Hallo,%20saya%20tertarik%20dengan%20produk%20{{$products->product_name}}" class="btn btn-dark btn-outline"><i class="fab fa-whatsapp"></i> Ask us for product detail</a>
                 @forelse ( $products->Brochures as $brochure )
                 <a href="{{ $brochure->brochure }}" class="btn btn-primary" style="float: right"><i class="fa fa-download"></i>  Download Product Brochure Here</a></div>
                 @empty

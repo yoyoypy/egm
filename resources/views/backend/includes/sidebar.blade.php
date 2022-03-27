@@ -23,9 +23,14 @@
                         <a href="{{ route ('productgallery.create') }}"> <i class="menu-icon fa fa-plus"></i>Tambah Photo Product</a>
                     </li> --}}
 
-                    <li class="menu-title">Product brochure</li><!-- /.menu-title -->
+                    <li class="menu-title">Product Brochure</li><!-- /.menu-title -->
                     <li class="">
                         <a href="{{ route ('brochure.index') }}"> <i class="menu-icon fa fa-list"></i>Lihat Product Brochure</a>
+                    </li>
+
+                    <li class="menu-title">Product Video</li><!-- /.menu-title -->
+                    <li class="">
+                        <a href="{{ route ('productvideo.index') }}"> <i class="menu-icon fa fa-list"></i>Lihat Product Video</a>
                     </li>
 
                     <li class="menu-title">Product Category</li><!-- /.menu-title -->
@@ -36,10 +41,10 @@
                         <a href="{{ route ('productcategory.create') }}"> <i class="menu-icon fa fa-plus"></i>Tambah Category</a>
                     </li> --}}
 
-                    <li class="menu-title">Blog</li><!-- /.menu-title -->
+                   {{-- <li class="menu-title">Blog</li><!-- /.menu-title -->
                     <li class="">
                         <a href="{{ route ('blog.index') }}"> <i class="menu-icon fa fa-list"></i>Lihat Artikel</a>
-                    </li>
+                    </li>--}}
                     {{-- <li class="">
                         <a href="{{ route ('blog.create') }}"> <i class="menu-icon fa fa-plus"></i>Tambah Artikel</a>
                     </li> --}}

@@ -46,23 +46,23 @@
                     <nav>
                         <ul>
                             <li><a href="/">Home</a></li>
-                            <li class="dropdown"><a href="product">Our Product</a>
+                            <li class="dropdown"><a href="../product">Our Product</a>
                                 <ul class="dropdown-menu">
                                     @foreach ( $categories as $category)
                                     {{-- <li class="dropdown-submenu"><a href="category/{{$category->slug}}">{{$category->category}}</a> --}}
                                     <li class="dropdown-submenu"><a>{{$category->category}}</a>
-                                        @foreach ( $category->Product as $product )
                                         <ul class="dropdown-menu">
-                                            <li><a href="product/{{$product->slug}}">{{$product->product_name}}</a></li>
-                                        </ul>
+                                            @foreach ( $category->Product as $product )
+                                            <li><a href="../product/{{$product->slug}}">{{$product->product_name}}</a></li>
                                         @endforeach
+                                        </ul>
                                     </li>
                                     @endforeach
                                 </ul>
                             </li>
                             <li class="dropdown mega-menu-item"><a href="../about-us">About Us</a></li>
                             <li class="dropdown mega-menu-item"><a href="../contact-us">Contact Us</a></li>
-                            <li class="dropdown mega-menu-item"><a href="../blog">Blog</a></li>
+                            {{--<li class="dropdown mega-menu-item"><a href="../blog">Blog</a></li>--}}
                         </ul>
                     </nav>
                 </div>

@@ -24,12 +24,22 @@
           <input  type="text"
                   name="product_name"
                   value="{{ old('product_name') }}"
+                  required
                   class="form-control @error('product_name') is-invalid @enderror"/>
           @error('product_name') <div class="text-muted">{{ $message }}</div> @enderror
         </div>
         <div class="form-group">
+            <label for="position" class="form-control-label">Product Position</label>
+            <input  type="number"
+                    name="position"
+                    required
+                    value="{{ old('position') }}"
+                    class="form-control @error('position') is-invalid @enderror"/>
+            @error('position') <div class="text-muted">{{ $message }}</div> @enderror
+        </div>
+        <div class="form-group">
             <label for="product_description" class="form-control-label">Product Description</label>
-            <textarea name="product_description"
+            <textarea name="product_description" required
                     class="ckeditor form-control @error('product_description') is-invalid @enderror">{{ old('product_description')}}</textarea>
             @error('product_description') <div class="text-muted">{{ $message }}</div> @enderror
           </div>

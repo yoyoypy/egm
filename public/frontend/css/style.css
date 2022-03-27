@@ -1074,6 +1074,7 @@ Topbar
         display: none; }
       #header .header-inner #logo a .logo-default,
       #header #header-wrap #logo a .logo-default {
+          max-width: 100%;
         display: block; }
       #header .header-inner #logo a,
       #header .header-inner #logo a span,
@@ -1216,12 +1217,12 @@ Topbar
   #header.dark .header-inner #logo a [class*="logo-"],
   #header.dark #header-wrap #logo a > img,
   #header.dark #header-wrap #logo a [class*="logo-"] {
-    max-width: 100%;
     display: none; }
   .dark #header .header-inner #logo a .logo-dark,
   .dark #header #header-wrap #logo a .logo-dark,
   #header.dark .header-inner #logo a .logo-dark,
   #header.dark #header-wrap #logo a .logo-dark {
+      max-width: 100%;
     display: block; }
   .dark #header .header-inner #logo a,
   .dark #header .header-inner #logo a span,
@@ -2262,7 +2263,7 @@ Main Menu: Responsive
   .mainMenu-open #header #logo [class*="logo-"] {
     display: none; }
   .mainMenu-open #header #logo .logo-default {
-    max-width: 100%;
+      max-width: 100%;
     display: block; } }
 @keyframes fade-in-out {
   0% {
@@ -3328,7 +3329,8 @@ p {
   text-transform: none;
   line-height: 1.7;
   letter-spacing: 0;
-  color: #777777;
+  /*color: #777777;*/
+  color : black;
   font-family: "Poppins", sans-serif; }
 
 ul.bullets {
@@ -10478,7 +10480,7 @@ a.btn:not([href]):not([tabindex]).disabled {
     left: auto; }
   .heading-text.heading-section p {
     font-size: 18px;
-    font-weight: 300; }
+    font-weight: 400; }
     .heading-text.heading-section p span {
       font-weight: 600; }
   .heading-text.heading-plain h2 {

@@ -9,6 +9,7 @@ use App\Category;
 use App\Gallery;
 use App\Brochure;
 use App\Http\Requests\ProductRequest;
+use App\ProductVideo;
 
 class ProductListController extends Controller
 {
@@ -95,6 +96,7 @@ class ProductListController extends Controller
     public function update(ProductRequest $request, $id)
     {
         $data = $request->all();
+        $data['slug'] = Str::slug($request->product_name);
 
         $item = Product::findOrFail($id);
         $item->update($data);
@@ -137,6 +139,19 @@ class ProductListController extends Controller
             ->get();
 
         return view('backend.pages.product.brochure')->with([
+            'product' => $product,
+            'items' => $items
+        ]);
+    }
+
+    public function video(Request $request, $id)
+    {
+        $product = Product::findorFail($id);
+        $items = ProductVideo::with('product')
+            ->where('product_id', $id)
+            ->get();
+
+        return view('backend.pages.product.video')->with([
             'product' => $product,
             'items' => $items
         ]);
