@@ -4,13 +4,13 @@
 <!-- Inspiro Slider -->
         <div id="slider" class="inspiro-slider slider-fullscreen dots-creative" data-fade="true">
             <!-- Slide 1 -->
-            <div class="slide kenburns" data-bg-image="{{ asset('frontend/images/sliderhome.jpg')}}">
+            <div class="slide kenburns" data-bg-image="{{ asset('frontend/images/slider-1.jpg')}}">
                 <div class="bg-overlay"></div>
                 <div class="container">
                     <div class="slide-captions text-center text-light">
                         <!-- Captions -->
                         <h1 data-caption-animate="zoom-out">WELCOME TO <br>ENDO GLOBAL MEDIKATAMA</h1>
-                        <p>Supplier berbagai perlengkapan  Mobile Network, Smart Lighting, Environment Monitoring, Camera, LED, Emergent Broadcast, Electromobile Charging, Smart City, WIFI system.</p>
+                        <p>Distributor untuk Drone Multifungsi , Smart City , Smart Farming , IOT, dan lain-lain</p>
                         <div><a href="#" class="btn btn-primary scroll-to">Our Product</a></div>
                         </span>
                         <!-- end: Captions -->
